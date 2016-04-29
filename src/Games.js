@@ -17,7 +17,7 @@ class Games extends React.Component {
 
   getGames(){
     let component = this;
-    let url = "https://evening-refuge-83933.herokuapp.com/categories/1/games.json";
+    let url = `https://sleepy-taiga-33802.herokuapp.com/categories/${this.props.params.categoryId}/games.json`;
     jQuery.getJSON(url, function(data) {
       component.setState({
         games: data.games
@@ -34,7 +34,7 @@ class Games extends React.Component {
             return(
               <li key={game.id}>
                 <Link to={`/categories/${game.category_id}/games/${game.id}`}>
-                {game.title}
+                {game.title} 
               </Link>
               </li>
             );

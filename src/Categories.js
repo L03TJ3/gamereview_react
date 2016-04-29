@@ -16,7 +16,7 @@ class Categories extends React.Component {
 
   getCategories(){
     let component = this;
-    let url = "https://evening-refuge-83933.herokuapp.com/categories.json";
+    let url = "https://sleepy-taiga-33802.herokuapp.com/categories.json";
     jQuery.getJSON(url, function(data) {
       component.setState({
         categories: data.categories
